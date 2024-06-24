@@ -1,0 +1,9 @@
+path: "/Users/joshuaruiz/Desktop/ALL_IN_ONE_RGB_IMG_ANOT" # dataset root dir
+train: data/train/images # train images (relative to 'path')
+train_labels: data/train/labels # train labels (relative to 'path')
+val: data/val/images # val images (relative to 'path')
+val_labels: data/val/labels # val labels (relative to 'path')
+
+# Classes
+names:
+  0: Human
