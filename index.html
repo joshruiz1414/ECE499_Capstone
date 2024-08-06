@@ -6,7 +6,7 @@
     <title>ECE 499 Webpage</title>
     <style>
 
-body {
+        body {
     font-family: Arial, sans-serif;
     margin: 20px;
     background-color: #f4f4f4;
@@ -20,8 +20,9 @@ header {
     text-align: center;
     width: 100%;
 }
+
 p {
-            margin-bottom: 20px;
+            margin-bottom: 20px; /* Adjust the value to increase or decrease spacing */
         }
 h1 {
     margin-top: 0;
@@ -43,7 +44,7 @@ footer {
     padding: 80px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-start; /* Aligns items at the start of the flex container */
     width: 100%;
 }
 .highlight {
@@ -54,39 +55,113 @@ footer {
         }
 .text-content {
     padding-bottom: 120px;
-    max-width: 40%;
+    max-width: 40%; /* Adjust as needed */
     text-align: left;
 }
 
 .image-container {
-    max-width: 40%;
+    max-width: 40%; /* Adjust as needed */
     display: flex;
     flex-direction: column;
-    align-items: flex;
+    align-items: flex; /* Aligns images to the end of the flex container */
 }
-        
+
 .image-container img {
     max-width: 50%;
     margin: 10px 0;
     border: 2px solid #ddd;
 }
+
+.container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+.metric {
+    background-color: #e0e4f5;
+    border-left: 5px solid #3a87bb;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.description {
+    font-style: italic;
+    color: #555;
+}
+
+.role {
+    font-style: italic;
+    color: #555;
+}
+
     </style>
 </head>
 <body>
     <header>
         <h1>Thermal Anomaly Detection using Computer Vision for Search and Rescue Drones</h1>
-        <h3>Created By Calum Clark, Joshua Ruiz, Swetha Anand, Vaishakh Vinod Menon, Kumudu Perera</h3>
+        <h3>Created by Calum Clark, Joshua Ruiz, Swetha Anand, Vaishakh Vinod Menon, Kumudu Perera</h3>
     </header>
 
     <main>
         <div class="content">
             <div class="text-content">
-                <h2>About</h2>
+                <h1>Team Members</h1>
+                <ul>
+                    <li>Calum Clark - <span class="role">Electrical Engineer</span></li>
+                    <li>Joshua Ruiz - <span class="role">Computer Engineer</span></li>
+                    <li>Swetha Anand - <span class="role">Computer Engineer</span></li>
+                    <li>Vaishakh Vinod Menon- <span class="role">Software Engineer</span></li>
+                    <li>Kumudu Perera - <span class="role">Electrical Engineer</span></li>
+                    
+                    
+                </ul>
+                <h2>Backround</h2>
+                <p>The need for this project emerges from the need for efficient and improved search and rescue operations in remote and environmentally challenging areas. By using the effectiveness of thermal cameras and computer vision methods, our project aims to improve the accuracy and safety of current search and rescue missions.</p>
+                <p>This project solution is intended to be used by search and rescue teams, including first responders and disaster recovery management companies. The solution is designed for use in remote areas where there is low cellular service. To overcome this issue, we focused on using a portable solution that can operate using external WiFi networks and service towers for human detection and location.</p>
+                <h2>Design</h2>
                 <p>Our project improves SAR operations by developing a system that uses thermal cameras to capture drone videos and processes it on a ground unit within 10 minutes of transmission. We use the Open HD platform to stream high-definition video from drones outfitted with thermal cameras, which can capture both greyscale and colour footage.</p>
                 <p>A Raspberry Pi is used to transmit this footage to a ground unit. A custom built machine learning model trained for thermal detection analyses the video stream to detect possible human presence. Our algorithm can handle a wide range of thermal imaging circumstances and processes footage frame by frame, ensuring consistent performance across different camera types.</p>
                 <p class="highlight">Our solution eliminates reliance on the internet by conducting close to real-time analysis locally, allowing for effective operations in remote locations.</p>
+                <div class="container">
+                    <h1>Results for Machine Learning Model </h1>
+            
+                    <h2>Basic Information</h2>
+                    <ul>
+                        <li><strong>Layers:</strong> 168</li>
+                        <li><strong>Parameters:</strong> 3,005,843</li>
+                        <li><strong>Number of Test Images:</strong> 3,168</li>
+                    </ul>
+            
+                    <h2>Detection Performance</h2>
+                    <div class="metric">
+                        <h3>Precision (Box P)</h3>
+                        <p><strong>0.98</strong></p>
+                        <p class="description">Indicates that 98% of the detected objects are correct.</p>
+                    </div>
+                    <div class="metric">
+                        <h3>Recall (R)</h3>
+                        <p><strong>0.983</strong></p>
+                        <p class="description">Indicates that 98.3% of the actual objects are correctly detected.</p>
+                    </div>
+                    <div class="metric">
+                        <h3>Mean Average Precision (mAP50)</h3>
+                        <p><strong>0.993</strong></p>
+                        <p class="description">The model's average precision at IoU threshold is 0.50.</p>
+                    </div>
+                    <div class="metric">
+                        <h3>Mean Average Precision (mAP50-95)</h3>
+                        <p><strong>0.695</strong></p>
+                        <p class="description">The model's average precision is 0.50 to 0.95.</p>
+                    </div>
+                </div>
+                <h2> Acknowledgements</h2>
+                <p> We would like to thank Bryan Bradford and Metchosin Search and Rescue for allowing us to collaborate on this project. We would also like to acknowledge Lin Cai as our supporting supervisor.</p>
                 <h2>Links</h2>
-                <p>Final report: <a href="https://github.com/joshruiz1414/ECE499_Capstone/blob/5f12e15c52a11f9f18fc7c1bc3b43b015d70e1ea/ECE%20499%20FInal%20Report.pdf" target="_blank">ECE 499 Report</a>.</p>
+                <p>Final Report: <a href="https://github.com/joshruiz1414/ECE499_Capstone/blob/5f12e15c52a11f9f18fc7c1bc3b43b015d70e1ea/ECE%20499%20FInal%20Report.pdf" target="_blank">ECE 499 Report</a>.</p>
             </div>
             <div class="image-container">
                 <h2>Machine Learning Model Example</h2>
