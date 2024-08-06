@@ -5,80 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECE 499 Webpage</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #3a87bb;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+p {
+            margin-bottom: 20px;
         }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-            width: 100%;
+h1 {
+    margin-top: 0;
+}
+
+a {
+    color: #3a87bb;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #ddd;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.content {
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+.highlight {
+            background-color: #e0e4f5;
+            border-left: 5px solid #3a87bb;
+            padding: 10px;
+            margin: 20px 0;
         }
-        h1 {
-            margin-top: 0;
-        }
-        a {
-            color: #4CAF50;
-        }
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #ddd;
-            margin-top: 20px;
-            width: 100%;
-        }
-        .content {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-        }
-        .text-content {
-            max-width: 600px;
-            padding-right: 20px;
-        }
-        .image-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .image-container img {
-            max-width: 150px;
-            margin: 10px;
-            border: 2px solid #ddd;
-        }
+.text-content {
+    padding-bottom: 120px;
+    max-width: 40%;
+    text-align: left;
+}
+
+.image-container {
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex;
+}
+        
+.image-container img {
+    max-width: 50%;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+}
     </style>
 </head>
 <body>
     <header>
         <h1>Thermal Anomaly Detection using Computer Vision for Search and Rescue Drones</h1>
+        <h3>Created By Calum Clark, Joshua Ruiz, Swetha Anand, Vaishakh Vinod Menon, Kumudu Perera</h3>
     </header>
 
     <main>
         <div class="content">
             <div class="text-content">
                 <h2>About</h2>
-                <p>ECE 499 project website.</p>
-
+                <p>Our project improves SAR operations by developing a system that uses thermal cameras to capture drone videos and processes it on a ground unit within 10 minutes of transmission. We use the Open HD platform to stream high-definition video from drones outfitted with thermal cameras, which can capture both greyscale and colour footage.</p>
+                <p>A Raspberry Pi is used to transmit this footage to a ground unit. A custom built machine learning model trained for thermal detection analyses the video stream to detect possible human presence. Our algorithm can handle a wide range of thermal imaging circumstances and processes footage frame by frame, ensuring consistent performance across different camera types.</p>
+                <p class="highlight">Our solution eliminates reliance on the internet by conducting close to real-time analysis locally, allowing for effective operations in remote locations.</p>
                 <h2>Links</h2>
-                <p>Final report at <a href="https://github.com/joshruiz1414/ECE499_Capstone/blob/5f12e15c52a11f9f18fc7c1bc3b43b015d70e1ea/ECE%20499%20FInal%20Report.pdf" target="_blank">report.com</a> .</p>
+                <p>Final report: <a href="https://github.com/joshruiz1414/ECE499_Capstone/blob/5f12e15c52a11f9f18fc7c1bc3b43b015d70e1ea/ECE%20499%20FInal%20Report.pdf" target="_blank">ECE 499 Report</a>.</p>
             </div>
-
             <div class="image-container">
-                <img src="https://github.com/joshruiz1414/ECE499_Capstone/blob/main/ML%20Example.png" alt="ML Model Example">
-                <img src="https://github.com/joshruiz1414/ECE499_Capstone/blob/main/Hardware%20Components.png" alt="Hardware Components">
-            </div> 
+                <h2>Machine Learning Model Example</h2>
+                <img src="https://github.com/joshruiz1414/ECE499_Capstone/blob/main/ML%20Example.png?raw=true" alt="ML Model Example">
+                <h2>Thermal Camera</h2>
+                <img src="https://github.com/joshruiz1414/ECE499_Capstone/blob/main/Hardware%20Components.png?raw=true" alt="Hardware Components">
+            </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; ECE 499 Website</p>
+        <p>ECE 499 Website</p>
     </footer>
 </body>
 </html>
