@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Basic Webpage</title>
+    <title>ECE 499 Webpage</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
             background-color: #f4f4f4;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         header {
             background-color: #4CAF50;
             color: white;
             padding: 10px 0;
             text-align: center;
+            width: 100%;
         }
         h1 {
             margin-top: 0;
@@ -28,6 +32,26 @@
             padding: 10px 0;
             background-color: #ddd;
             margin-top: 20px;
+            width: 100%;
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .text-content {
+            max-width: 600px;
+            padding-right: 20px;
+        }
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .image-container img {
+            max-width: 150px;
+            margin: 10px;
+            border: 2px solid #ddd;
         }
     </style>
 </head>
@@ -37,12 +61,20 @@
     </header>
 
     <main>
-        <h2>About</h2>
-        <p>ECE 499 project website.</p>
+        <div class="content">
+            <div class="text-content">
+                <h2>About</h2>
+                <p>ECE 499 project website.</p>
 
-        <h2>Links</h2>
-        <p>Final report at <a href="https://github.com/joshruiz1414/ECE499_Capstone/blob/5f12e15c52a11f9f18fc7c1bc3b43b015d70e1ea/ECE%20499%20FInal%20Report.pdf" target="_blank">report.com</a> .</p>
+                <h2>Links</h2>
+                <p>Final report at <a href="https://github.com/joshruiz1414/ECE499_Capstone/blob/5f12e15c52a11f9f18fc7c1bc3b43b015d70e1ea/ECE%20499%20FInal%20Report.pdf" target="_blank">report.com</a> .</p>
+            </div>
 
+            <div class="image-container">
+                <img src="https://github.com/joshruiz1414/ECE499_Capstone/blob/main/ML%20Example.png" alt="ML Model Example">
+                <img src="https://github.com/joshruiz1414/ECE499_Capstone/blob/main/Hardware%20Components.png" alt="Hardware Components">
+            </div> 
+        </div>
     </main>
 
     <footer>
